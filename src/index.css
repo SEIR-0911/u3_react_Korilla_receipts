@@ -1,0 +1,40 @@
+body{
+  font-family:'Courier New', Courier, monospace;
+}
+
+#root{
+  display: flex;
+  justify-content: space-around;
+}
+
+.receipt{
+  position:relative;
+  border: 1px solid rgb(201, 201, 201);
+  width: 25vw;
+  margin: 2rem;
+}
+
+.order{
+  list-style-type: none;
+  padding-left: 1vw;
+  text-align: left;
+  margin-bottom:10vh;
+}
+
+li{
+  padding: .5vh;
+}
+
+.cost{
+  position:absolute;
+  bottom:0;
+  padding-left: 13vw;
+}
+
+.key{
+  font-weight:bold;
+}
+
+
+
+
