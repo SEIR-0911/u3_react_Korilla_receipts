@@ -1,0 +1,26 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.receipt {
+  border-width: 1px;
+  border-style: solid;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+}
+
+.item-category {
+  color:blueviolet;
+  font-weight: bold;
+}
