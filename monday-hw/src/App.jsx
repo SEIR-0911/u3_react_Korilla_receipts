@@ -16,8 +16,6 @@ function App() {
 
   function payReceipt(id) {
     let unPaidReceipts = allReceipts.map((receipt) => {
-      console.log(id);
-
       id === receipt.id ? (receipt.paid = true) : receipt.paid;
       return receipt;
     });
