@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Chango', sans-serif;
 }
 
 .logo {
@@ -54,4 +55,14 @@
   max-width: 100%;
   border: 5px solid white;
   border-radius: 5px;
+}
+
+.Receipts {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }

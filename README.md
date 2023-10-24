@@ -2,6 +2,15 @@
 
 # Korilla React Receipts
 
+## Homework Submission:
+
+![Paid: False for Jeremy/Brittany/Tom](JeremyBrittanyTomFalse.png)
+1. With "paid: false" for Jeremy/Brittany/Tom and "paid: true" for John.
+
+![Paid: True for All](AllTrue.png)
+2. With paid: true all.
+
+
 Korilla is a Korean barbecue taco truck that makes thousands of hungry customers
 happy every year.
 

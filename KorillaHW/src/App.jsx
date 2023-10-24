@@ -1,11 +1,10 @@
 import './App.css'
 
 import Header from './components/Header'
-import Main from './components/Main'
+import Receipt from './components/Receipt'
 import Footer from './components/Footer'
 
 function App() {
-
   const receipts = [
     {
       id: 1,
@@ -19,7 +18,7 @@ function App() {
         drink: 'Thai Iced Tea',
         cost: 22,
       },
-      paid: false,
+      paid: true,
     },
     {
       id: 2,
@@ -33,7 +32,7 @@ function App() {
         drink: 'Korchata',
         cost: 19,
       },
-      paid: false,
+      paid: true,
     },
     {
       id: 3,
@@ -47,7 +46,7 @@ function App() {
         drink: 'Sparkling Blood Orange Soda',
         cost: 20,
       },
-      paid: false,
+      paid: true,
     },
     {
       id: 4,
@@ -63,12 +62,18 @@ function App() {
       },
       paid: true,
     },
-  ];
+  ]
 
   return (
     <div className="App">
       <Header />
-      <Main />
+      <div className="Receipts">
+        {receipts.map((receipt)=> {
+          if(receipt.paid == false) {
+            return (<Receipt receipt={receipt}/>)
+          }
+        })}
+        </div>
       <Footer />
     </div>
   )
