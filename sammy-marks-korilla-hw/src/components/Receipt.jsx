@@ -2,11 +2,14 @@ const Receipt = (props) => {
     const receipt = props.receiptData
 
     if (receipt.paid == false) {
-        let toppingsString = new Array
-        receipt.order.toppings.map((item, index) => {
-            toppingsString += `${item}, `
-        })
-        toppingsString = toppingsString.slice(0,toppingsString.length-2)
+        // let toppingsString = new Array
+        // receipt.order.toppings.map((item, index) => {
+        //     toppingsString += `${item}, `
+        // })
+        // toppingsString = toppingsString.slice(0,toppingsString.length-2)
+
+        // let toppingsJoin = receipt.order.toppings.join(", ")
+        // console.log(toppingsJoin)
         
         return (
             <div className="receipt">
@@ -15,7 +18,7 @@ const Receipt = (props) => {
                 <p className="item"><span className="item-category">Protien: </span>{receipt.order.main}</p>
                 <p className="item"><span className="item-category">Rice: </span>{receipt.order.rice}</p>
                 <p className="item"><span className="item-category">Sauce: </span>{receipt.order.sauce}</p>
-                <p className="item"><span className="item-category">Toppings: </span>{toppingsString}</p>
+                <p className="item"><span className="item-category">Toppings: </span>{receipt.order.toppings.join(", ")}</p>
                 <p className="item"><span className="item-category">Drink: </span>{receipt.order.drink}</p>
                 <p className="item"><span className="item-category">Cost: </span>${receipt.order.cost}</p>
             </div>
@@ -24,13 +27,3 @@ const Receipt = (props) => {
 }
   
 export default Receipt
-
-/*
-Name
-Main
-Protien
-Rice
-Sauce
-Drink
-Cost
-*/
