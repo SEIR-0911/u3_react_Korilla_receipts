@@ -18,7 +18,7 @@ function App() {
         drink={receipt.order.drink}
         cost={receipt.order.cost}
         paid={receipt.paid}
-        />: null
+        /> : null
  ))
 
  function handleReceipts () {
@@ -27,7 +27,9 @@ function App() {
   return (
 
       <div className='main-content'>
-        <button onClick={handleReceipts}>New Receipts</button>
+        <div btn-wrapper>
+          <button onClick={handleReceipts}>New Receipts</button>
+        </div>
         {allReceipts}
       </div>
 

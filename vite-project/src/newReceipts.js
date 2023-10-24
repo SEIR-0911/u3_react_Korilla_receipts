@@ -1,26 +1,25 @@
-
 const newReceipts = [
 {
     id: 5,
-    person: 'Hayk',
+    person: 'Esse',
     order: {
-      main: 'Salad Bowl',
+      main: 'Rice Bowl',
       protein: 'Organic Tofu',
-      rice: 'none',
-      sauce: "K'lla",
-      toppings: ['Blue Potato Salad', 'Pico De Gallo', 'Red Kimchi'],
+      rice: 'Brown Rice',
+      sauce: "Green Crack",
+      toppings: ['Baby Bok Choy' , 'Red Kimchi'],
       drink: 'Sparkling Blood Orange Soda',
-      cost: 20,
+      cost: 22,
     },
     paid: false,
   },
   {
     id: 6,
-    person: 'Shanda',
+    person: 'Benji',
     order: {
       main: 'Burrito Bowl',
-      protein: 'Carnitas',
-      rice: 'yellow rice',
+      protein: 'Pork',
+      rice: 'Brown Rice',
       sauce: "Jalapeno Honey",
       toppings: ['Grilled Corn', 'Pico De Gallo', 'Guacamole'],
       drink: 'Pineapple Jarritos',

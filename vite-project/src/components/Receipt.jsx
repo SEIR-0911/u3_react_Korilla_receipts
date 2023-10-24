@@ -7,7 +7,7 @@ const Receipt = (props) => {
             <p>Rice: {props.rice}</p>
             <p>Sauce: {props.sauce}</p>
             <p>Drink: {props.drink}</p>
-            <p>Cost: {props.cost}</p>
+            <p>Cost: ${props.cost}</p>
         </div>
     )
 }

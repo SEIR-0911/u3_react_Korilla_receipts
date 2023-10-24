@@ -5,10 +5,32 @@
   text-align: center;
 }
 
-.main-content {
+/* .main-content {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column 2f;
+  flex-wrap: wrap;
+} */
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+button {
+  border-radius: 6px;
+  background-color: rgba(165, 42, 42, 0.161);
+  height: 40px;
+  width: 200px;
+  color: pink;
+}
+
+
+button:hover {
+  box-shadow: 2px 2px 4px brown;
+  color: brown;
 }
 
 .receipt-container {
@@ -16,10 +38,12 @@
   justify-content: center;
   flex-direction: column;
   border: 1px solid pink;
+  color:brown;
   flex-wrap: wrap;
   margin: 20px;
   padding: 20px;
   min-width: 300px;
+  border-radius: 3px;
 }
 
 p {

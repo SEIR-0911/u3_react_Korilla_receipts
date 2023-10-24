@@ -1,4 +1,3 @@
-
 const receipts = [
     {
       id: 1,
@@ -12,7 +11,7 @@ const receipts = [
         drink: 'Thai Iced Tea',
         cost: 22,
       },
-      paid: true,
+      paid: false,
     },
     {
       id: 2,
@@ -26,7 +25,7 @@ const receipts = [
         drink: 'Korchata',
         cost: 19,
       },
-      paid: false,
+      paid: true,
     },
     {
       id: 3,
@@ -48,13 +47,13 @@ const receipts = [
       order: {
         main: 'Burrito Bowl',
         protein: 'Carnitas',
-        rice: 'yellow rice',
+        rice: 'Yellow Rice',
         sauce: "Jalapeno Honey",
         toppings: ['Grilled Corn', 'Pico De Gallo', 'Guacamole'],
         drink: 'Pineapple Jarritos',
         cost: 23,
       },
-      paid: false,
+      paid: true,
     },
   ]
 
