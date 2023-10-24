@@ -1,4 +1,4 @@
-const receipts = [
+const RECEIPTS = [
     {
         id: 1,
         person: 'Jeremy',
@@ -53,6 +53,8 @@ const receipts = [
             drink: 'Pineapple Jarritos',
             cost: 23,
         },
-        paid: true,
+        paid: false,
     },
 ];
+
+export default RECEIPTS;

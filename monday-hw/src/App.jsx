@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import RECEIPTS from "./assets/data/Receipts.js";
+import NEW_RECEIPTS from "./assets/data/NewReceipts.js";
+import Receipt from "./Receipt";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [allReceipts, setAllReceipts] = useState(RECEIPTS);
+
+  function addReceipts() {
+    console.log(NEW_RECEIPTS);
+    console.log("adding more", allReceipts);
+
+    setAllReceipts([...allReceipts, ...NEW_RECEIPTS]);
+  }
+
+  function payReceipt(id) {
+    let unPaidReceipts = allReceipts.map((receipt) => {
+      console.log(id);
+
+      id === receipt.id ? (receipt.paid = true) : receipt.paid;
+      return receipt;
+    });
+    console.log(unPaidReceipts);
+    setAllReceipts(unPaidReceipts);
+  }
+
+  const receipts = allReceipts.map((receipt) =>
+    !receipt.paid ? (
+      <Receipt
+        key={receipt.id}
+        id={receipt.id}
+        person={receipt.person}
+        main={receipt.order.main}
+        protein={receipt.order.protein}
+        rice={receipt.order.rice}
+        sauce={receipt.order.sauce}
+        drink={receipt.order.drink}
+        cost={receipt.order.cost}
+        payReceipt={payReceipt}
+      />
+    ) : null
+  );
 
   return (
-    <>
+    <main className='main-container'>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <h1 className='main-title'>Korilla</h1>
+        <button className='add-new-receipts' onClick={addReceipts}>
+          Add New Receipts
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <div className='receipt-container'>{receipts}</div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
