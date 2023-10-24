@@ -1,16 +1,7 @@
 const Receipt = (props) => {
     const receipt = props.receiptData
 
-    if (receipt.paid == false) {
-        // let toppingsString = new Array
-        // receipt.order.toppings.map((item, index) => {
-        //     toppingsString += `${item}, `
-        // })
-        // toppingsString = toppingsString.slice(0,toppingsString.length-2)
-
-        // let toppingsJoin = receipt.order.toppings.join(", ")
-        // console.log(toppingsJoin)
-        
+    if (!receipt.paid) {        
         return (
             <div className="receipt">
                 <h2 className="name">{receipt.person}</h2>
