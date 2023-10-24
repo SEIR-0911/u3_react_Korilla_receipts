@@ -1,0 +1,88 @@
+:root {
+  font-family: 'Alata', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+/* Header */
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url("https://isernio.com/wp-content/uploads/2023/02/2.8.23-18-1536x1024.jpg");
+  background-size: cover;
+  height: 300px;
+  font-size: 1.7rem;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 100%;
+  background-color: #242424ab;
+}
+.header h1 {
+  margin-bottom: 10px;
+  /* text-shadow: 2px 2px #929292; */
+  z-index: 9;
+}
+/* Receipt */
+.receipt {
+  width: 250px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #2e2e2e;
+  position: relative;
+  border-radius: 3px;
+}
+.receipt::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  height: calc(100% + 3px * 2);
+  width: calc(100% + 3px * 2);
+  background: linear-gradient(60deg, #f17816, #fcc022, #17d1a5, #fef1cf);
+  border-radius: 3px;
+  animation: animatedborder 3s ease alternate infinite;
+  z-index: -1;
+  background-size: 300% 300%;
+}
+.receipt-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+@keyframes animatedborder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
