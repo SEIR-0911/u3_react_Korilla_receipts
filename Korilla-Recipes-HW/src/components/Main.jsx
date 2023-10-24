@@ -4,11 +4,11 @@ const Main = (props) => {
 
     const receiptComponents = props.receipts.map((receipt, index) => {
         return (
-            <Receipt 
-                receiptData={receipt}
-                index={index}
-                key={index}
-            />
+                <Receipt 
+                    receiptData={receipt}
+                    index={index}
+                    key={index}
+                />
         )
     })
 

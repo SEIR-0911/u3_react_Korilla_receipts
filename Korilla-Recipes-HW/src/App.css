@@ -1,3 +1,9 @@
+body{
+  background-image: url("https://img.freepik.com/premium-photo/black-stone-background-black-surface-top-view-free-space-your-text_187166-56482.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -32,11 +38,27 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-
 .card {
   padding: 2em;
 }
+.header{
+  color: orange;
+}
+.header:hover{
+  animation: shake 0.8s;
+}
+@keyframes shake{
+  0%{
+    transform: translateY(0);
+  }
 
+  50%{
+    transform: translateY(-75px);
+  }
+  75%{
+    transform: translateY(0px);
+  }
+}
 .read-the-docs {
   color: #888;
 }
@@ -44,28 +66,17 @@
   background-color: #888;
   border: 2px solid orange;
   width:  200px;
-  position: relative;
-  overflow: hidden;
 }
-.receipt-image{
-  max-width: 100%;
-  height: auto;
-  position:  absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.receipt:hover .receipt-image{
+.receipt:hover {
   box-shadow: 5px 5px 12px orange;
   padding: 1%;
   transform: translateY(-10px);
+  background-image: url("https://www.seriouseats.com/thmb/lOdEqFZsV3LOzX5Pc2Y6XCJuvTs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__10__20201002-mission-style-burrito-jillian-atkinson-2-6841455590ed4c3981529b232166643a.jpg");
   background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 color: rgb(58, 1, 1);
 background-blend-mode: screen;
-opacity: 1;
 }
 
 .main{
@@ -77,7 +88,6 @@ opacity: 1;
 }
 #order{
   text-align: left;
-    list-style:circle;
 }
 #list{
   text-align: left;
