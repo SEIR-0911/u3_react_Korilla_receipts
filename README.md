@@ -1,8 +1,10 @@
-### SEIR 0911
+### SEBR 0116
+
+# Korilla React Receipts
 
 ![koreanTacos](https://www.foodnetwork.com/content/dam/images/food/fullset/2014/4/16/0/DV1906H_Korean-Bulgogi-Taco-Recipe_s4x3.jpg)
 
-# Korilla React Receipts
+
 
 Korilla is a Korean barbecue taco truck that makes thousands of hungry customers
 happy every year.
@@ -19,13 +21,15 @@ Build a prototype of this short order receipts tracker.
 
 1. Fork and clone this repository.
 1. Create a new React App
-1. Add Commit and Push
 1. Fulfill the listed requirements.
+1. Add, Commit, and Push to Github
 
 ## Requirements
 
 Follow the walkthrough and finish all parts. If you have extra time, finish the
 bonus as well.
+
+Make sure there is a .gitignore file in your root directory with /node_modules within, so that you aren't pushing all 15k files up when you do your git commands
 
 ## Part 1: Sample Receipts
 
@@ -77,7 +81,7 @@ const receipts = [
   },
   {
     id: 4,
-    person: 'John',
+    person: 'Jessica',
     order: {
       main: 'Burrito Bowl',
       protein: 'Carnitas',
